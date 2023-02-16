@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-#1/bin/bash
-=======
 #!/bin/bash
->>>>>>> 74c648b86774c221a028750510c7669036586f92
-gcc -S -masm=intel $CFILE
+gcc -masm=intel $CFILE -S > $(echo $CFILE|cut -d"." -f1).s
